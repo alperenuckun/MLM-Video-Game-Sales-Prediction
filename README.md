@@ -1,100 +1,39 @@
-# Machine Learning Model Comparison for Video Game Sales Prediction
+Machine Learning Model Comparison
 
-## Overview
-This project aims to predict global sales of video games using machine learning models. We compare multiple regression models and visualize their performance.
+Overview
 
-## Dataset
-The dataset used in this project is vgsales.csv, which contains video game sales data, including:
+This project predicts global sales of video games using machine learning models and compares their performance.
 
-Platform: The console/platform the game was released on.
+Dataset
 
-Genre: Type of game (e.g., Action, Sports, RPG, etc.).
+Platform, Genre, Sales (NA, EU, JP, Other, Global)
 
-Sales: Sales numbers in different regions (NA, EU, JP, Other) and global sales.
+Source: vgsales.csv
 
-## Models Implemented
-The following regression models are trained and evaluated:
+Models Used
 
-Linear Regression
+Linear Regression, Ridge, Lasso, KNN
 
-Ridge Regression
+Decision Tree, Random Forest, Extra Trees
 
-Lasso Regression
+Bagging, AdaBoost, Gradient Boosting
 
-K-Nearest Neighbors
+Support Vector Machine (SVM), XGBoost
 
-Decision Tree Regressor
+Preprocessing
 
-Extra Tree Regressor
+Missing Values: Year → mean, Publisher → mode
 
-Random Forest Regressor
+Encoding: Label Encoding for Platform & Genre
 
-Bagging Regressor
+Feature Selection: NA_Sales, EU_Sales, JP_Sales, Other_Sales
 
-AdaBoost Regressor
+Evaluation
 
-Gradient Boosting Regressor
+R² Score, MSE, MAE, Training Time
 
-Support Vector Machine (SVM)
+Feature Correlation Heatmap
 
-XGBoost Regressor
+Performance Barplot, Boxplot, Scatterplot
 
-## Preprocessing Steps
-
-Handling Missing Values:
-
-The Year column is filled with its mean value.
-
-The Publisher column is filled with its most frequent value.
-
-Encoding Categorical Variables:
-
-The Platform and Genre columns are converted to numerical values using Label Encoding.
-
-Feature Selection:
-
-Selected features: Platform, Genre, NA_Sales, EU_Sales, JP_Sales, Other_Sales.
-
-Target variable: Global_Sales.
-
-## Model Evaluation
-
-R² Score: Measures the proportion of variance explained by the model.
-
-Mean Squared Error (MSE): Average squared difference between actual and predicted values.
-
-Mean Absolute Error (MAE): Average absolute difference between actual and predicted values.
-
-Training Time: Time taken to train each model.
-
-## Visualizations
-
-Feature Correlation Heatmap: Displays relationships between numeric features.
-
-Model Performance Analysis:
-
-Bar plot comparing R² Scores of different models.
-
-Boxplot showing the distribution of model performance.
-
-Scatter plot illustrating the relationship between training time and R² Score.
-
-## Usage
-
-Installation
-
-Ensure you have the required dependencies installed:
-
-pip install pandas numpy seaborn matplotlib scikit-learn xgboost
-
-Running the Script
-
-Execute the Python script to train models and generate visualizations:
-
-python model_comparison.py
-
-Expected Output
-
-Printed R² Score, MSE, MAE, and Training Time for each model.
-
-Visualization plots comparing model performances.
+Usage
