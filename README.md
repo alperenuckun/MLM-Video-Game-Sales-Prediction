@@ -65,8 +65,5 @@ To analyze the results, the following visualizations are included:
 ```sh
 pip install pandas numpy seaborn matplotlib scikit-learn xgboost
 ```
-### Run the Model Comparison Script
-```sh
-python model_comparison.py
-```
+
 
